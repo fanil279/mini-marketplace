@@ -26,12 +26,18 @@
 
 
 Запуск проекта локально:
+
     1. Склонируйте репозиторий:
         git clone https://github.com/fanil279/mini-marketplace
-        cd mini-marketplace
+    
+    2. Перейдите в папку проекта:
+        cd mini-marketplace        
 
-    2. Установите зависимости:
+    3. Установите зависимости:
         yarn install
 
-    3. Запустите проект:
+    4. Создайте .env file со следующим значением:
+        VITE_BACKEND_URL=https://fakestoreapi.com
+
+    4. Запустите проект:
         yarn dev
