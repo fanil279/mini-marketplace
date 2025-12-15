@@ -11,7 +11,7 @@ async function renderProducts() {
         products.forEach((product) => {
             const card = document.createElement('div');
 
-            card.className = 'product-card';
+            card.className = 'product-cart';
 
             card.innerHTML = `
                 <img src="${product.image}" alt="${product.title}" />
@@ -21,7 +21,7 @@ async function renderProducts() {
             `;
 
             card.querySelector('button').addEventListener('click', () => {
-                window.dispatchEvent(new CustomEvent('add-to-cart', { productType: product }));
+                window.dispatchEvent(new CustomEvent('add-to-cart', { detail: product }));
             });
 
             productsList.appendChild(card);
